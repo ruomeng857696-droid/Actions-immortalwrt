@@ -2,6 +2,7 @@ CONFIG_TARGET_ramips=y
 CONFIG_TARGET_ramips_mt7621=y
 CONFIG_TARGET_MULTI_PROFILE=y
 
+CONFIG_TARGET_DEVICE_ramips_mt7621_DEVICE_xiaomi_mi-router-3g=y
 #极简版插件（放过这个CPU吧）
 
 # 科学插件调整
