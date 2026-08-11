@@ -52,3 +52,15 @@ fi
 echo "========================================"
 echo "homeproxy 处理完成！"
 echo "初始化设置执行成功!"
+# 注入MT7621平台完整QoS流量调度内核开关
+cat >> target/linux/ramips/mt7621/config-6.6 <<'EOF'
+CONFIG_NET_SCHED=y
+CONFIG_NET_SCH_HTB=y
+CONFIG_NET_SCH_SFQ=y
+CONFIG_NET_SCH_CODEL=y
+CONFIG_NET_SCH_FQ_CODEL=y
+CONFIG_NET_CLS=y
+CONFIG_NET_CLS_FW=y
+CONFIG_NET_CLS_U32=y
+CONFIG_NET_CLS_ACT=y
+EOF
