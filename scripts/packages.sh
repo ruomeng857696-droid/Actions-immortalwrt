@@ -65,3 +65,7 @@ git clone -b master --depth 1 https://github.com/QiuSimons/luci-app-daed.git
 popd
 
 echo "packages executed successfully!"
+# 流量限速工具与内核模块
+echo "CONFIG_PACKAGE_tc=y" >> .config
+echo "CONFIG_PACKAGE_kmod-net-sched-htb=y" >> .config
+echo "CONFIG_PACKAGE_kmod-net-sched-sfq=y" >> .config
